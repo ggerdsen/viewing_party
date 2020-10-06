@@ -10,7 +10,7 @@ deploy:
   provider: heroku
   api_key:
     secure: hdU4yf+jIjH632LFnMh4dVJl1zV7il6qg+X3bFRDj/sM/rT+FKaTVp/NYG7BX64+pQx9Rl4mUjwkgM6kaWG3/pqlMhr26aDLLoh5fs8p2yNPavcQiwKmaIAPvoRemffoJ43yTUq40L3Stu8UmMx/BlOxE+SDt6jpNzt+DKl2COAUxwrf3V+McFRwXc2Q0GOSui5YQ3nd7Qttr40IaPwIHpTyHUglJsmhEmdxnFDVQefPYURcsLDINb4wk/TkZjGC/jNjhyi6WKqRIgLRBeeH+p+Dj/STlMcVWW3/2WhCzXF7lsi9mcQOLKhwGcwHc0o1vFxolsPDipcmuMkLm/nhmmz7JBBTB5pvJ0UGBhkMINEiCZ4HNzd3IDJuEBFaF5RIfW4y0YJr1g36+t1R7SWzTn8YHQ2iqErt1cXSnvaOdZ5RNpiSyP0ITKDtjtKXnnuw2eVV6jq7HsuWYkowvTMlPYeX9udfDkCUiOqGR4yYrmMsmfe83u4Xh161qQ5f0CVRDUv3yfwkRlgPo4n7FjP1ykXXT87WFCGTjq+PNiIRq6qaI18V6m0pBqGDS8HNruJUjoGSm90Ne+TKIJeaRYA9u1Gi5t4ClG9BxeHaM6QDPiWn3WAGJdoOlmnO9hJ9wlZIdwpZTxeSrzeZekMaZkne7eriWBq6t09lwzRAfcZjBlo=
-  app:
+  app: viewing-party-paired
   run: rails db:migrate
 
 # language: ruby
