@@ -15,6 +15,11 @@
       <%= link_to "PLACEHOLDER", "/" %>
     </nav>
     <main>
+      <% flash.each do |name, msg| %>
+        <div class= "<%=name%>-flash">
+          <center><%= msg %></center>
+        </div>
+      <% end %>
       <%= yield %>
     </main>
     <footer>
