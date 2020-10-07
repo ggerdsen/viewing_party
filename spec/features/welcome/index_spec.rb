@@ -14,7 +14,7 @@ RSpec.describe "As an visitor, when I visit the root path, " do
   it "I see a button to login" do
     visit "/"
     within '.topnav' do
-      expect(page).to have_button("Log In")
+      expect(page).to have_link("Log In")
     end
   end
   
