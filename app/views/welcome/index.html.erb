@@ -1,0 +1,16 @@
+<h1>Welcome to Viewing Party!</h1>
+<hr>
+  <center>
+    <p>Find a movie, invite some friends, watch movies together!</p>
+    <% if !current_user %>
+      <p>Please enter your login information:</p>
+      <%= form_tag '/login', method: :post do %>
+        <%= label_tag :email %>
+        <%= text_field_tag :email %>
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+        <%= submit_tag "Log In" %>
+      <% end %>
+    <% end %>
+  </center>
+<hr>
