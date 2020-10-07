@@ -27,10 +27,21 @@ RSpec.describe "As an visitor, when I visit the root path, " do
     expect(page).to_not have_button("Log In")
   end
   
-  xit "I see a link to register" do
+  it "I am not allowed to log in with bad credentials" do
+    regular_user = User.create!(name: "Larry", email: "regular_user@email.com", password: "123")
+
     visit "/"
-    within '.topnav' do
-      expect(page).to have_link("Register")
-    end
+    
+    fill_in :email, with: "#{regular_user.email}"
+    fill_in :password, with: "wrong"
+
+    click_on "Log In"
+
+    expect(page).to have_content("Your login credentials are incorrect")
+  end
+  
+  it "I see a link to register" do
+    visit "/"
+    expect(page).to have_link("New to Viewing Party? Register Here")
   end
 end
