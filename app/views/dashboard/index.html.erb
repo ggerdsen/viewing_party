@@ -1,1 +1,5 @@
 <center><h1><%= "Welcome #{@user.name}!" %></h1></center>
+
+<section class="discover-movies">
+  <%= button_to "Discover Movies", discover_index_path, method: :get %>
+</section>
