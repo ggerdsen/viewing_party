@@ -17,5 +17,12 @@ RSpec.describe "Dashboard" do
         expect(page).to have_button "Discover Movies"
       end
     end
+
+    it "Has a friend's section" do
+      visit '/dashboard'
+      within(".friends") do
+        expect(page).to have_button "Add Friend"
+      end
+    end
   end
 end
