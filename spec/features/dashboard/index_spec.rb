@@ -25,5 +25,12 @@ RSpec.describe "Dashboard" do
         expect(page).to have_content("Your Friends:")
       end
     end
+
+    it "Has a viewing parties section" do
+      visit '/dashboard'
+      within(".viewing-parties") do
+        expect(page).to have_content("Viewing Parties:")
+      end
+    end
   end
 end
