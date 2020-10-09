@@ -11,7 +11,7 @@ RSpec.describe "Dashboard" do
       click_on "Log In"
     end
 
-    it "sees a welcome message and a button to discover movies" do
+    xit "sees a welcome message and a button to discover movies" do
       visit "/discover"
       click_on "Discover Movies"
     end
