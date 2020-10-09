@@ -17,6 +17,8 @@ RSpec.describe "Dashboard" do
       within '.discover-movies' do
         expect(page).to have_button "Discover Movies"
       end
+      click_on "Discover Movies"
+      expect(current_path).to eq("/discover")
     end
 
     it "Has a friend's section" do
