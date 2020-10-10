@@ -2,26 +2,26 @@ class FriendshipsController < ApplicationController
   def create
     @friend = User.find_by_email(user_params[:friends_email])
     if @friend
-      @friendship = current_user.friendships.build(friend_id: @friend.id)
-      if @friendship.save
-        friend_success
-      else
-        friend_fail
-      end
+      create_friendship
     else
-      friend_fail
+      friendship_failed
     end
   end
 
   private
 
-  def friend_fail
-    flash[:error] = 'Unable to add friend.'
-    redirect_to '/dashboard'
+  def create_friendship
+    @friendship = current_user.friendships.build(friend_id: @friend.id)
+    if @friendship.save
+      flash[:success] = "#{@friend.name} added to Friends!"
+      redirect_to '/dashboard'
+    else
+      friendship_failed
+    end
   end
 
-  def friend_success
-    flash[:success] = "#{@friend.name} added to Friends!"
+  def friendship_failed
+    flash[:error] = 'Unable to add friend.'
     redirect_to '/dashboard'
   end
 
