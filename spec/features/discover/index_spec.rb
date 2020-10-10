@@ -1,9 +1,8 @@
 require "rails_helper"
 
-RSpec.describe "Dashboard" do
+RSpec.describe "Discover" do
   describe "As an authenticated user" do
     before :each do
-      # @regular_user = User.create!(name: "Larry", email: "regular_user@email.com", password: "123")
       @regular_user = create(:user)
       visit "/"
       fill_in :email, with: "#{@regular_user.email}"
@@ -11,9 +10,9 @@ RSpec.describe "Dashboard" do
       click_on "Log In"
     end
 
-    xit "sees a welcome message and a button to discover movies" do
-      visit "/discover"
-      click_on "Discover Movies"
+    it "sees a welcome message and a button to discover movies", :vcr do
+        visit "/discover"
+        click_on "Find Top Rated Movies"
     end
   end
 end
