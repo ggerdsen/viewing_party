@@ -1,2 +1,4 @@
-<center><h1><%= "Welcome #{@user.name}!" %></h1></center>
-<p><%=button_to "Discover Movies", "/discover_movies", method: :get%></p>
+<center><h1><%= "Welcome #{current_user.name}!" %></h1></center>
+<center><p><%= button_to "Find Top Rated Movies", "/movies", :params => {:search_string => "3/movie/top_rated"}, method: :get %></p></center>
+
+
