@@ -1,0 +1,9 @@
+<center><h1><%= "Welcome #{current_user.name}!" %></h1></center>
+<center><p><%= button_to "Find Top Rated Movies", "/movies", :params => {:search_string => "3/movie/top_rated"}, method: :get%></p></center>
+
+<% if !@movies.nil? %>
+  <h1>Top 40 Movies:</h1>
+  <% @movies.each do |movie| %>
+    <p><%= movie[:title] %> ->>> <%= movie[:vote_average] %></p>
+  <% end %>
+<% end %>
