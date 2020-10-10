@@ -10,16 +10,15 @@ RSpec.describe "Dashboard" do
       click_on "Log In"
     end
 
-    it "Has a 'Add Friend' button" do
+    it "Has an 'Add Friend' button" do
       visit '/dashboard'
       within(".friends") do
         expect(page).to have_field("Friend's Email")
         expect(page).to have_button("Add Friend")
-        # expect(page).to have_content("You currently have no friends.")
       end
     end
 
-    it "Can add friends and see those friends in the user dashboard" do
+    it "Can add friends and see those friends in the user dashboard friend's section" do
       visit '/dashboard'
       friend_user = create(:user)
 
@@ -31,7 +30,19 @@ RSpec.describe "Dashboard" do
 
       expect(current_path).to eq('/dashboard')
       expect(page).to have_content(friend_user.name)
-      save_and_open_page
+    end
+
+    it "Can not add a friend that does not exist in the database" do
+      visit '/dashboard'
+      fake_user = "woohoo@email.com"
+
+      within(".friends") do
+        fill_in :friends_email, with: fake_user
+        click_on "Add Friend"
+      end
+
+      expect(current_path).to eq('/dashboard')
+      expect(page).to have_content('Unable to add friend.')
     end
   end
 end
