@@ -17,13 +17,14 @@ RSpec.describe "Dashboard" do
       within '.discover-movies' do
         expect(page).to have_button "Discover Movies"
       end
+      click_on "Discover Movies"
+      expect(current_path).to eq("/discover")
     end
 
     it "Has a friend's section" do
       visit '/dashboard'
       within(".friends") do
-        # expect(page).to have_button "Add Friend"
-        expect(page).to have_content("Your Friends:")
+        expect(page).to have_content("Friends:")
       end
     end
 

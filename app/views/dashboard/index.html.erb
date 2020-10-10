@@ -1,13 +1,28 @@
-<center><h1><%= "Welcome #{@user.name}!" %></h1></center>
+<center>
+  <h1><%= "Welcome #{@user.name}!" %></h1>
 
 <section class="discover-movies">
   <%= button_to "Discover Movies", discover_index_path, method: :get %>
 </section>
 
-<section class="friends">
-  <h3>Your Friends:</h3>
-</section>
+  <section class="friends">
+    <h3>Friends:</h3>
+    <% if current_user.friends.empty? %>
+      <p>"You currently have no friends."</p>
+    <% else %>
+      <% current_user.friends.each do |friend| %>
+        <p><%= friend.name %></p>
+      <% end %>
+    <% end %>
 
-<section class="viewing-parties">
-  <h3>Viewing Parties:</h3>
-</section>
+    <%= form_tag friendships_path(:user_id => @user), method: :post do %>
+      <%= label_tag :friends_email, "Friend's Email" %><br/>
+      <%= text_field_tag :friends_email %>
+      <%= submit_tag "Add Friend" %>
+    <% end %>
+  </section>
+
+  <section class="viewing-parties">
+    <h3>Viewing Parties:</h3>
+  </section>
+</center>
