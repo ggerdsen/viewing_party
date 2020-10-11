@@ -11,13 +11,14 @@ RSpec.describe "Movie Index Page" do
       click_on "Log In"
     end
 
-    it "I can see the top 40 movies by average rating", :vcr do
-      
-      visit "/discover"
-      click_on "Find Top Rated Movies"
+    it "I can see the top 40 movies by average rating" do
+      VCR.use_cassette("top_40", allow_playback_repeats: true) do
+        visit "/discover"
+        click_on "Find Top Rated Movies"
 
-      expect(current_path).to eq("/movies")
-      expect(page).to have_content("Gabriel's Inferno Part II")
+        expect(current_path).to eq("/movies")
+        expect(page).to have_content("Gabriel's Inferno Part II")
+      end
       
     end
   end
