@@ -10,7 +10,7 @@ RSpec.describe "Discover" do
       click_on "Log In"
     end
 
-    it "sees a welcome message and a button to discover movies", :vcr do
+    xit "sees a welcome message and a button to discover movies", :vcr do
         visit "/discover"
         click_on "Find Top Rated Movies"
     end
