@@ -1,0 +1,17 @@
+<center><h1><%= "Welcome #{current_user.name}!" %></h1></center>
+<center><p><%= button_to "Find Top Rated Movies", "/movies", :params => {:endpoint => "3/movie/top_rated"}, method: :get%></p></center>
+
+
+
+<% if !@top_40_movies.nil? %>
+  <h1>Top 40 Movies:</h1>
+  <% @top_40_movies.each do |movie| %>
+    <p><%= movie[:title] %> ->>> <%= movie[:vote_average] %></p>
+  <% end %>
+<% end %>
+<% if !@search_results.nil? %>
+  <h1>Search Results:</h1>
+  <% @search_results.each do |movie| %>
+    <p><%= movie[:name] if !movie.nil?%></p>
+  <% end %>
+<% end %>

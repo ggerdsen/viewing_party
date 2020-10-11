@@ -5,11 +5,10 @@ Rails.application.routes.draw do
 
   resources :dashboard, only: :index
   resources :discover, only: :index
+  resources :movies, only: :index
 
   get "/register", to: "users#new"
   post "/register", to: "users#create"
-
-  get "/discover_movies", to: "search#index"
 
   post "/friendships", to: "friendships#create"
 end
