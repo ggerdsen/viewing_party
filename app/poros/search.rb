@@ -6,13 +6,26 @@ class Search
       conn = Faraday.new(url: "https://api.themoviedb.org") do |faraday|
         faraday.params["api_key"] = ENV["MOVIE_DB_API_KEY"]
       end
-      if search_string == ""
+      
+      
+      
+      if endpoint == "3/movie/top_rated"
         top_40(movie_count_limit, endpoint, conn)
+      elsif endpoint != "3/movie/top_rated" && search_string == ""
+        movie(movie_count_limit, endpoint, conn)
       else
         search_this(endpoint, search_string, conn)
       end
   end
   
+  def self.movie(movie_count_limit, endpoint, conn)
+    results = []
+      res = conn.get("#{endpoint}") do |f|
+        f.params["page"] = 1
+      end
+      json = JSON.parse(res.body, symbolize_names: true)
+  end
+
   def self.top_40(movie_count_limit, endpoint, conn)
     page = 1
     results = []
