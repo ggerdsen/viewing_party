@@ -6,7 +6,7 @@
 <% if !@top_40_movies.nil? %>
   <h1>Top 40 Movies:</h1>
   <% @top_40_movies.each do |movie| %>
-    <p><%= movie[:title] %> ->>> <%= movie[:vote_average] %></p>
+    <p><%= link_to "#{movie[:title]}", "/movies/#{movie[:id]}" %> ->>> <%= movie[:vote_average] %></p>
   <% end %>
 <% end %>
 <% if !@search_results.nil? %>
