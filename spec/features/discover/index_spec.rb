@@ -11,7 +11,7 @@ RSpec.describe "Discover" do
     end
 
     it "sees a welcome message and a button to discover movies" do
-      VCR.use_cassette("top_40", allow_playback_repeats: true) do
+      VCR.use_cassette("top_40", allow_playback_repeats: true, :record => :new_episodes) do
         visit "/discover"
         click_on "Find Top Rated Movies"
         

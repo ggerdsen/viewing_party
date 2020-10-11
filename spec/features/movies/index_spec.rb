@@ -3,7 +3,6 @@ require "rails_helper"
 RSpec.describe "Movie Index Page" do
   describe "As an authenticated user" do
     before :each do
-      # @regular_user = User.create!(name: "Larry", email: "regular_user@email.com", password: "123")
       @regular_user = create(:user)
       visit "/"
       fill_in :email, with: "#{@regular_user.email}"
@@ -12,7 +11,7 @@ RSpec.describe "Movie Index Page" do
     end
 
     it "I can see the top 40 movies by average rating" do
-      VCR.use_cassette("top_40", allow_playback_repeats: true) do
+      VCR.use_cassette("top_40", allow_playback_repeats: true, :record => :new_episodes) do
         visit "/discover"
         click_on "Find Top Rated Movies"
 
@@ -22,7 +21,7 @@ RSpec.describe "Movie Index Page" do
     end
       
     it "I can search for a movie by keyword" do
-      VCR.use_cassette("search_by_keyword", allow_playback_repeats: true) do
+      VCR.use_cassette("search_by_keyword", allow_playback_repeats: true, :record => :new_episodes) do
         visit "/discover"
         expect(page).to have_button("Find Movies")
         fill_in :search, with: "sunset"
