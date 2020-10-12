@@ -1,9 +1,9 @@
 # Viewing Party
-Add learning goals here!! 
+### BE Mod 3 Week 1/2 Paired Project
 
 This is the base repo for the [viewing party project](https://backend.turing.io/module3/projects/viewing_party) used for Turing's Backend Module 3.
 
-### BE Mod 3 Week 1/2 Paired Project
+### Deploy and Repo Links
 
 #### [Heroku Deployment](http://viewing-party-paired.herokuapp.com)
 #### [Github Repo](https://github.com/Callbritton/viewing_party/)
@@ -18,6 +18,11 @@ This is the base repo for the [viewing party project](https://backend.turing.io/
 "Viewing Party" is a web application where users can search for information about their favorite movies. Viewing Party consumes multiple endpoints from [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction).
 
 Example wireframes to follow are found [here](https://backend.turing.io/module3/projects/viewing_party/wireframes)
+
+## Learning Goals
+
+- Add our goals here!
+- and here...
 
 ## Setup
 
