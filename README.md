@@ -36,6 +36,6 @@ This project requires:
 
 ## Schema
 
-<img width="800" height="600" alt="Schema Light Screenshot" src="/app/assets/images/monster_shop_group_schema_light0.png">
+<img width="800" height="600" alt="Schema Light Screenshot" src="https://github.com/ggerdsen/monster_shop_2005/blob/main/app/assets/images/monster_shop_group_schema_light0.png?raw=true">
 
 
