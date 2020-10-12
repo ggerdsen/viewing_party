@@ -3,7 +3,7 @@
 
 This is the base repo for the [viewing party project](https://backend.turing.io/module3/projects/viewing_party) used for Turing's Backend Module 3.
 
-### Deploy and Repo Links
+### Deployment and Repo Links
 
 #### [Heroku Deployment](http://viewing-party-paired.herokuapp.com)
 #### [Github Repo](https://github.com/Callbritton/viewing_party/)
