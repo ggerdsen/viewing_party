@@ -17,6 +17,8 @@ This is the base repo for the [viewing party project](https://backend.turing.io/
 
 "Viewing Party" is a web application where users can search for information about their favorite movies. Viewing Party consumes multiple endpoints from [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction).
 
+Github Projects Page found [here](https://github.com/Callbritton/viewing_party/projects/1)
+
 Example wireframes to follow are found [here](https://backend.turing.io/module3/projects/viewing_party/wireframes)
 
 ## Learning Goals
