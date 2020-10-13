@@ -1,17 +1,16 @@
 <center><h1><%= "Welcome #{current_user.name}!" %></h1></center>
-<center><p><%= button_to "Find Top Rated Movies", "/movies", :params => {:endpoint => "3/movie/top_rated"}, method: :get%></p></center>
+<center><p><%= button_to "Find Top Rated Movies", "/movies",  method: :get%></p></center>
 
+  <%= form_tag "/movies", method: :get do %>
+    <%= label_tag :search_string %>
+    <%= text_field_tag :search_string %>
+    <%= submit_tag "Find Movies" %>
 
-
-<% if !@top_40_movies.nil? %>
-  <h1>Top 40 Movies:</h1>
-  <% @top_40_movies.each do |movie| %>
-    <p><%= link_to "#{movie[:title]}", "/movies/#{movie[:id]}" %> ->>> <%= movie[:vote_average] %></p>
-  <% end %>
-<% end %>
-<% if !@search_results.nil? %>
-  <h1>Search Results:</h1>
-  <% @search_results.each do |movie| %>
-    <p><%= movie[:name] if !movie.nil?%></p>
-  <% end %>
+  <h3>Movies:</h3>
+<% @movies.each do |movie| %><br>
+    <section id='movie-<%= movie.id %>'>
+      <p>Title: <%= link_to movie.title, "/movies/#{movie.id}" %></p>
+      <p>Average Rating: <%= movie.vote_average %></p>
+    </section>
+  <%end %>
 <% end %>
