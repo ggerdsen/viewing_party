@@ -39,12 +39,11 @@ RSpec.describe "As an visitor, when I visit the root path, " do
     expect(current_path).to eq("/dashboard")
     
     visit "/"
-    save_and_open_page
     expect(page).to have_link("Click Here to Logout")
     click_link("Click Here to Logout")
     visit "/"
     expect(page).to_not have_link("Click Here to Logout")
-    
+    expect(page).to have_content("You have been logged out")
   end
   
   it "I am not allowed to log in with bad credentials" do
