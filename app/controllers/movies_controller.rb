@@ -6,4 +6,11 @@ class MoviesController < ApplicationController
       @search_results = Search.get_movies(40, "3/search/keyword", params[:search_string])
     end
   end
+  
+  def show
+    # binding.pry
+    @movie = Search.get_movies(1, "3/movie/#{params[:id]}")
+    # response = conn.get("3/movie/#{params[:id]}?api_key=#{movies_api_key}")
+    # @movie = JSON.parse(response.body, symbolize_names: true)
+  end
 end

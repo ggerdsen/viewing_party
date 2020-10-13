@@ -27,6 +27,24 @@ RSpec.describe "As an visitor, when I visit the root path, " do
     expect(page).to_not have_button("Log In")
   end
   
+  it "I see a button to logout" do
+    regular_user = User.create!(name: "Larry", email: "regular_user@email.com", password: "123")
+
+    visit "/"
+    
+    fill_in :email, with: "#{regular_user.email}"
+    fill_in :password, with: "#{regular_user.password}"
+
+    click_on "Log In"
+    expect(current_path).to eq("/dashboard")
+    
+    visit "/"
+    expect(page).to have_link("Click Here to Logout")
+    click_link("Click Here to Logout")
+    expect(page).to have_content("You have been logged out")
+    expect(page).to_not have_link("Click Here to Logout")
+  end
+  
   it "I am not allowed to log in with bad credentials" do
     regular_user = User.create!(name: "Larry", email: "regular_user@email.com", password: "123")
 
