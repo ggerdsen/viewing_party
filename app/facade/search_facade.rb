@@ -13,14 +13,14 @@ class SearchFacade
   end
 
   def top_40
-    results = @movie_data.top_rated_movies(results)
+    results = @movie_data.top_rated_movies
      results.map do |data|
       MovieSearch.new(data)
     end
   end
 
   def find_movies(search_string)
-    results = @movie_data.search_by_title(results, search_string)
+    results = @movie_data.search_by_title(search_string)
      results.map do |data|
       MovieSearch.new(data)
     end
