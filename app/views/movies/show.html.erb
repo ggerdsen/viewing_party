@@ -1,0 +1,7 @@
+<h1><%= "Welcome #{current_user.name}!" %></h1>
+<h2><%= @movie[:title] %></h2>
+<%= button_to "Create Viewing Party for Movie", "/friendships", method: :get %>
+<p>Vote Average: <%= @movie[:vote_average] %> Runtime: <%= @movie[:runtime] %> Genre(s): <%= @movie[:genres].map {|genre| genre[:name]} %>
+<hr>
+<h2>Summary</h2>
+<p><%= @movie[:overview] %></p>
