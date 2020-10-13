@@ -11,8 +11,10 @@
         <%= password_field_tag :password %>
         <%= submit_tag "Log In" %>
       <% end %>
+      <%= link_to "New to Viewing Party? Register Here", "/register" %>
+    <% else %>
+      <%= link_to "Click Here to Logout", "/logout", method: :delete %>
     <% end %>
     <br>
-    <%= link_to "New to Viewing Party? Register Here", "/register" %>
   </center>
 <hr>
