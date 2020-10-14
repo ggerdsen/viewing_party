@@ -23,8 +23,13 @@ Example wireframes to follow are found [here](https://backend.turing.io/module3/
 
 ## Learning Goals
 
-- Add our goals here!
-- and here...
+- Consume JSON APIs that require authentication ⭐ ⭐ ⭐
+- Build an application that requires basic authentication ⭐ ⭐ ⭐
+- Organize and refactor code to be more maintainable ⭐ ⭐
+- Implement a self-referential relationship in ActiveRecord ⭐ ⭐
+- Apply RuboCop’s style guide for code quality ⭐
+- Utilize Continuous Integration using Travis CI ⭐
+- Deploy to Heroku ⭐
 
 ## Setup
 
