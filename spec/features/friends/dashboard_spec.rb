@@ -44,5 +44,17 @@ RSpec.describe "Dashboard" do
       expect(current_path).to eq('/dashboard')
       expect(page).to have_content('Unable to add friend.')
     end
+    
+    it "Can not add myself as a friend" do
+      visit '/dashboard'
+
+      within(".friends") do
+        fill_in :friends_email, with: @regular_user.email
+        click_on "Add Friend"
+      end
+
+      expect(current_path).to eq('/dashboard')
+      expect(page).to have_content('Unable to add friend.')
+    end
   end
 end
