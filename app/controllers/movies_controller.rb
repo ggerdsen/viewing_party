@@ -8,6 +8,12 @@ class MoviesController < ApplicationController
       return_results(search_string)
     end
   end
+  
+  def show
+    # binding.pry
+    movie = SearchFacade.new
+    @movie = movie.show_movie("3/movie/#{params[:id]}")
+  end
 
   def return_results(search_string)
     movie = SearchFacade.new
