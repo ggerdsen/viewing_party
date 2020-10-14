@@ -8,7 +8,7 @@ RSpec.describe 'Search Facade' do
     movies = movies_search.movies_results(search_string)
 
     expect(movies).to be_an(Array)
-    expect(movies.first).to be_a(MovieSearch)
+    expect(movies.first).to be_a(Movie)
     expect(movies.first.title).to be_a(String)
   end
 
@@ -18,7 +18,7 @@ RSpec.describe 'Search Facade' do
     movies = top_40_search.top_40
 
     expect(movies).to be_an(Array)
-    expect(movies.first).to be_a(MovieSearch)
+    expect(movies.first).to be_a(Movie)
     expect(movies.first.title).to be_a(String)
     expect(movies.length).to eq(40)
   end
@@ -30,7 +30,7 @@ RSpec.describe 'Search Facade' do
     movies = find_movies_search.find_movies(search_string)
 
     expect(movies).to be_an(Array)
-    expect(movies.first).to be_a(MovieSearch)
+    expect(movies.first).to be_a(Movie)
     expect(movies.first.title).to be_a(String)
     expect(movies.length).to eq(2)
 
