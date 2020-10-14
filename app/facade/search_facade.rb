@@ -24,4 +24,8 @@ class SearchFacade
       MovieSearch.new(data)
     end
   end
+  
+  def show_movie(id)
+    
+  end
 end
