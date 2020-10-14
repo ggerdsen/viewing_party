@@ -9,11 +9,6 @@ class MoviesController < ApplicationController
     end
   end
 
-  def incomplete_search
-    flash[:error] = 'Please complete the field to continue.'
-    redirect_to '/movies'
-  end
-
   def return_results(search_string)
     movie = SearchFacade.new
     @movies = movie.movies_results(search_string)

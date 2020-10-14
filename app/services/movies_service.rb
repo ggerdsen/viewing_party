@@ -1,30 +1,30 @@
 class MoviesService
-  def top_rated_movies(results)
+  def top_rated_movies
     both_pages = []
     page1 = conn.get('3/movie/top_rated?page=1')
     page2 = conn.get('3/movie/top_rated?page=2')
-    both_pages << page1_results(results, page1)
-    both_pages << page2_results(results, page2)
+    both_pages << page1_results(page1)
+    both_pages << page2_results(page2)
     both_pages.flatten
   end
 
-  def search_by_title(results, search_string)
+  def search_by_title(search_string)
     both_pages = []
     page1 = conn.get("3/search/movie?query=#{search_string}&page=1")
     page2 = conn.get("3/search/movie?query=#{search_string}&page=2")
-    both_pages << page1_results(results, page1)
-    both_pages << page2_results(results, page2)
+    both_pages << page1_results(page1)
+    both_pages << page2_results(page2)
     both_pages.flatten
   end
 
   private
 
-  def page1_results(results, page1)
+  def page1_results(page1)
     results1 = JSON.parse(page1.body, symbolize_names: true)
     results1[:results]
   end
 
-  def page2_results(results, page2)
+  def page2_results(page2)
     results2 = JSON.parse(page2.body, symbolize_names: true)
     results2[:results]
   end
