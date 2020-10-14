@@ -49,6 +49,6 @@ This project requires:
 
 ## Schema
 Add notes for why we structured things this way!
-<img width="800" height="600" alt="Schema Light Screenshot" src="https://github.com/ggerdsen/monster_shop_2005/blob/main/app/assets/images/monster_shop_group_schema_light0.png?raw=true">
+<img width="800" height="600" alt="Schema Light Screenshot" src="https://github.com/Callbritton/viewing_party/blob/main/app/assets/images/viewing_party_paired_schema.png?raw=true">
 
 
