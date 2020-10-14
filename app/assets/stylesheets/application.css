@@ -114,8 +114,8 @@
  }
 
  input[type=submit] {
-   width: 50%;
-   background-color: #b08e2c;
+   width: 80%;
+   background-color: #38bd42;
    color: white;
    padding: 14px 20px;
    margin: 1px 0;
@@ -125,7 +125,7 @@
  }
 
  input[type=submit]:hover {
-   background-color: #743b1a;
+   background-color: #a6aaa6;
  }
  
  form {

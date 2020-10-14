@@ -5,10 +5,12 @@
     <% if !current_user %>
       <p>Please enter your login information:</p>
       <%= form_tag '/login', method: :post do %>
-        <%= label_tag :email %>
-        <%= text_field_tag :email %>
-        <%= label_tag :password %>
-        <%= password_field_tag :password %>
+        <% label_tag :email %>
+        <%= text_field_tag :email, "Email Address" %>
+        <br>
+        <% label_tag :password %>
+        <%= password_field_tag :password, "Password" %>
+        <br>
         <%= submit_tag "Log In" %>
       <% end %>
       <%= link_to "New to Viewing Party? Register Here", "/register" %>

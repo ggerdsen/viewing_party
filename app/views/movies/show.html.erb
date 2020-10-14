@@ -1,7 +1,21 @@
 <h1><%= "Welcome #{current_user.name}!" %></h1>
-<h2><%= @movie[:title] %></h2>
+<h2><%= @movie_summary.title %></h2>
 <%= button_to "Create Viewing Party for Movie", "/friendships", method: :get %>
-<p>Vote Average: <%= @movie[:vote_average] %> Runtime: <%= @movie[:runtime] %> Genre(s): <%= @movie[:genres].map {|genre| genre[:name]} %>
+<p>Vote Average: <%= @movie_summary.vote_average %> Runtime: <%= @movie_summary.to_hours_minutes %>
+  Genre(s): <% @movie_summary.genres_list.each do |genre| %>
+              <%=genre%>
+            <% end %></p>
 <hr>
 <h2>Summary</h2>
-<p><%= @movie[:overview] %></p>
+<p><%= @movie_summary.overview %></p>
+<hr>
+<h2>Cast</h2>
+<% @cast.info.first(10).each do |name| %>
+  <p><%= name[:name] %> as <%= name[:character]%></p>
+<% end %>
+<hr>
+<h2><%= @reviews.info.length %> Reviews</h2>
+<% @reviews.info.each do |review| %>
+  <h3>Author: <%=review[:author]%></h3>
+  <p><%=review[:content]%></p>
+<% end %>
