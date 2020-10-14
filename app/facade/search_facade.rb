@@ -24,36 +24,36 @@ class SearchFacade
       Movie.new(data)
     end
   end
-  
+
   def get_summary(id)
     summary = @movie_data.get_summary(id)
     movie_data(summary)
   end
-  
+
   def get_reviews(id)
     reviews = @movie_data.get_reviews(id)
     review_data(reviews)
   end
-  
+
   def get_credits(id)
     credits = @movie_data.get_credits(id)
     cast_data(credits)
   end
-  
+
   private
-  
+
   def movie_data(object)
     object.map do |data|
       Movie.new(data)
     end
   end
-  
+
   def cast_data(object)
     object.map do |data|
       Cast.new(data)
     end
   end
-  
+
   def review_data(object)
     object.map do |data|
       Review.new(data)

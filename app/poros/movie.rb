@@ -1,5 +1,5 @@
 class Movie
-  attr_reader :title, :vote_average, :id, :genres, :runtime, :overview, :genres_list
+  attr_reader :title, :vote_average, :id, :genres, :runtime, :overview
 
   def initialize(data)
     @title = data[:title]
@@ -9,14 +9,14 @@ class Movie
     @runtime = data[:runtime]
     @genres = data[:genres]
   end
-  
+
   def genres_list
-    x = @genres.map {|genre| genre[:name]}
+    @genres.map { |genre| genre[:name] }
   end
-  
+
   def to_hours_minutes
     hours = @runtime / 60
     rest = @runtime % 60
-    x = "#{hours}hr #{rest} min"
+    "#{hours}hr #{rest} min"
   end
 end

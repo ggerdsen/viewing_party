@@ -3,5 +3,5 @@ class Party < ApplicationRecord
   has_many :party_guests, dependent: :destroy
   has_many :guests, through: :party_guests
 
-  validates_presence_of :movie_title, :party_duration, :date, :start_time
+  validates :movie_title, :party_duration, :date, :start_time, presence: true
 end

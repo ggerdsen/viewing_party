@@ -16,19 +16,19 @@ class MoviesService
     both_pages << page2_results(page2)
     both_pages.flatten
   end
-  
+
   def get_summary(id)
     results = []
     query = conn.get("3/movie/#{id}")
     results << JSON.parse(query.body, symbolize_names: true)
   end
-  
+
   def get_reviews(id)
     results = []
     query = conn.get("3/movie/#{id}/reviews")
     results << JSON.parse(query.body, symbolize_names: true)
   end
-  
+
   def get_credits(id)
     results = []
     query = conn.get("3/movie/#{id}/credits")
