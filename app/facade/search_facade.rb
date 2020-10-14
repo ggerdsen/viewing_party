@@ -14,38 +14,49 @@ class SearchFacade
   def top_40
     results = @movie_data.top_rated_movies
     results.map do |data|
-      MovieSearch.new(data)
+      Movie.new(data)
     end
   end
 
   def find_movies(search_string)
     results = @movie_data.search_by_title(search_string)
     results.map do |data|
-      MovieSearch.new(data)
+      Movie.new(data)
     end
   end
   
   def get_summary(id)
     summary = @movie_data.get_summary(id)
-    map_data(summary)
+    movie_data(summary)
   end
   
   def get_reviews(id)
-    # binding.pry
     reviews = @movie_data.get_reviews(id)
-    # map_data(reviews)
+    review_data(reviews)
   end
   
   def get_credits(id)
     credits = @movie_data.get_credits(id)
-    map_data(credits)
+    cast_data(credits)
   end
   
   private
   
-  def map_data(object)
+  def movie_data(object)
     object.map do |data|
-      MovieSearch.new(data)
+      Movie.new(data)
+    end
+  end
+  
+  def cast_data(object)
+    object.map do |data|
+      Cast.new(data)
+    end
+  end
+  
+  def review_data(object)
+    object.map do |data|
+      Review.new(data)
     end
   end
 end
