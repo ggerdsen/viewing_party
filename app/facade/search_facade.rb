@@ -25,7 +25,27 @@ class SearchFacade
     end
   end
   
-  def show_movie(id)
-    
+  def get_summary(id)
+    summary = @movie_data.get_summary(id)
+    map_data(summary)
+  end
+  
+  def get_reviews(id)
+    # binding.pry
+    reviews = @movie_data.get_reviews(id)
+    # map_data(reviews)
+  end
+  
+  def get_credits(id)
+    credits = @movie_data.get_credits(id)
+    map_data(credits)
+  end
+  
+  private
+  
+  def map_data(object)
+    object.map do |data|
+      MovieSearch.new(data)
+    end
   end
 end

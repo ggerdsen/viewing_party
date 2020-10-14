@@ -10,9 +10,10 @@ class MoviesController < ApplicationController
   end
   
   def show
-    # binding.pry
     movie = SearchFacade.new
-    @movie = movie.show_movie("3/movie/#{params[:id]}")
+    @movie_summary = movie.get_summary("#{params[:id]}")
+    @reviews = movie.get_reviews("#{params[:id]}")
+    @credits = movie.get_credits("#{params[:id]}")
   end
 
   def return_results(search_string)
