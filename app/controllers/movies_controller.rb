@@ -11,9 +11,9 @@ class MoviesController < ApplicationController
   
   def show
     movie = SearchFacade.new
-    @movie_summary = movie.get_summary("#{params[:id]}")
-    @reviews = movie.get_reviews("#{params[:id]}")
-    @credits = movie.get_credits("#{params[:id]}")
+    @movie_summary = (movie.get_summary("#{params[:id]}")).first
+    @reviews = (movie.get_reviews("#{params[:id]}")).first
+    @cast = (movie.get_credits("#{params[:id]}")).first
   end
 
   def return_results(search_string)
