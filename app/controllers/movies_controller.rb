@@ -1,8 +1,8 @@
 class MoviesController < ApplicationController
   def index
     search_string = params[:search_string]
-    if search_string == ''
-      flash[:error] = 'Please complete the field to continue.'
+    if search_string == ""
+      flash[:error] = 'Please enter keywords for your search'
       redirect_to '/movies'
     else
       return_results(search_string)
