@@ -14,7 +14,9 @@ RSpec.describe "As an visitor, when I visit the root path, " do
     fill_in :password, with: "123"
     fill_in :password_confirmation, with: "123"
 
-    click_on "Register"
+    within '.register' do
+      click_on "Register"
+    end
     
     expect(current_path).to eq("/dashboard")
     expect(page).to have_content("Welcome Larry!")
@@ -31,7 +33,9 @@ RSpec.describe "As an visitor, when I visit the root path, " do
     fill_in :password, with: "wrong"
     fill_in :password_confirmation, with: "right"
     
-    click_on "Register"
+    within '.register' do
+      click_on "Register"
+    end
     
     expect(page).to have_content("Password confirmation doesn't match Password")
   end

@@ -1,25 +1,27 @@
 <h1>Welcome to Viewing Party!</h1>
 <hr>
   <center>
-    <% if !current_user %>
-      <p>Please register for an account:</p>
-      <%= form_tag '/register', method: :post do %>
-        <%= label_tag :name %>
-        <%= text_field_tag :name %>
-        <br>
-        <%= label_tag :email %>
-        <%= text_field_tag :email %>
-        <br>
-        <%= label_tag :password %>
-        <%= password_field_tag :password %>
-
-        <%= label_tag :password_confirmation %>
-        <%= password_field_tag :password_confirmation %>
-        <br>
-        <%= submit_tag "Register" %>
+    <section class="register">
+      <% if !current_user %>
+        <p>Please register for an account:</p>
+        <%= form_tag '/register', method: :post do %>
+          <%= label_tag :name %>
+          <%= text_field_tag :name %>
+          <br>
+          <%= label_tag :email %>
+          <%= text_field_tag :email %>
+          <br>
+          <p><%= label_tag :password %>
+          <%= password_field_tag :password %>
+          <%= label_tag :password_confirmation %>
+          <%= password_field_tag :password_confirmation %>
+          </p>
+          <br>
+          <%= submit_tag "Register" %>
+        <% end %>
       <% end %>
-    <% end %>
-    <br>
-    <%= link_to "Already registered? Log in here", "/" %>
+      <br>
+      <%= link_to "Already registered? Log in here", "/" %>
+    </section>  
   </center>
 <hr>
