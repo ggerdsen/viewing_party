@@ -16,8 +16,8 @@ RSpec.describe "Dashboard" do
       expect(page).to have_content("Welcome #{@regular_user.name}")
       within '.discover-movies' do
         expect(page).to have_button "Discover Movies"
+        click_on "Discover Movies"
       end
-      click_on "Discover Movies"
       expect(current_path).to eq("/discover")
     end
 

@@ -1,16 +1,18 @@
 <center><h1><%= "Welcome #{current_user.name}!" %></h1></center>
 <center><p><%= button_to "Find Top Rated Movies", "/movies",  method: :get%></p></center>
 
+<center>
   <%= form_tag "/movies", method: :get do %>
-    <%= label_tag :search_string %>
-    <%= text_field_tag :search_string %>
+    <% label_tag :search_string %>
+    <%= text_field_tag :search_string, "Enter your keywords here" %>
     <%= submit_tag "Find Movies" %>
 
-  <h3>Movies:</h3>
-<% @movies.each do |movie| %><br>
-    <section id='movie-<%= movie.id %>'>
+    <h3>Movies:</h3>
+    <% @movies.each do |movie| %><br>
+      <section id='movie-<%= movie.id %>'>
       <p>Title: <%= link_to movie.title, "/movies/#{movie.id}" %></p>
       <p>Average Rating: <%= movie.vote_average %></p>
     </section>
-  <%end %>
+    <%end %>
+  </center>
 <% end %>
