@@ -12,7 +12,7 @@ class FriendshipsController < ApplicationController
 
   def create_friendship
     @friendship = current_user.friendships.build(friend_id: @friend.id)
-    if @friendship.save
+    if @friendship.save && current_user.id != @friend.id
       flash[:success] = "#{@friend.name} added to Friends!"
       redirect_to '/dashboard'
     else
