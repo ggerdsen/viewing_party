@@ -35,9 +35,10 @@ class MoviesService
     results << JSON.parse(query.body, symbolize_names: true)
   end
 
-  private
+  # private
 
   def page1_results(page1)
+    puts page1.body
     results1 = JSON.parse(page1.body, symbolize_names: true)
     results1[:results]
   end
