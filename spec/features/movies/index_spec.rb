@@ -31,5 +31,17 @@ RSpec.describe "Movie Index Page" do
         expect(page).to have_content("Sunset")
       end
     end
+    
+    it "I am given an error if I leave the search box empty when searching" do
+      VCR.use_cassette("search_by_keyword", allow_playback_repeats: true, :record => :new_episodes) do
+        visit "/discover"
+        expect(page).to have_button("Find Movies")
+        fill_in :search, with: ""
+        click_on "Find Movies"
+        expect(current_path).to eq("/movies")
+
+        expect(page).to have_content("Please enter keywords for your search")
+      end
+    end
   end
 end
