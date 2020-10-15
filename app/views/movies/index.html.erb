@@ -1,18 +1,25 @@
-<center><h1><%= "Welcome #{current_user.name}!" %></h1></center>
-<center><p><%= button_to "Find Top Rated Movies", "/movies",  method: :get%></p></center>
-
+<center><h1><%= "Welcome #{current_user.name}!" %></h1>
+<p><%= button_to "Retrieve Most Recent Movie", "/movies", :params => {:endpoint => "3/movie/latest", :search_string => "#newest_movie"}, method: :get %></p>
+<h3>OR</h3>
+<p><%= button_to "Find Top Rated Movies", "/movies", :params => {:endpoint => "3/movie/top_rated"}, method: :get %></p>
+<h3>OR</h3>
 <center>
   <%= form_tag "/movies", method: :get do %>
     <% label_tag :search_string %>
-    <%= text_field_tag :search_string, "Enter your keywords here" %>
+    <%= text_field_tag :search_string, "Enter your keywords to search here" %>
     <%= submit_tag "Find Movies" %>
-
+  <% end %>
     <h3>Movies:</h3>
-    <% @movies.each do |movie| %><br>
-      <section id='movie-<%= movie.id %>'>
-      <p>Title: <%= link_to movie.title, "/movies/#{movie.id}" %></p>
-      <p>Average Rating: <%= movie.vote_average %></p>
-    </section>
-    <%end %>
+    <% if !@movie.nil? %>
+      <p>Most Recently Updated Movie:</p>
+      <p>Title: <%= link_to @movie.title, "/movies/#{@movie.id}" %></p>
+      <p>Average Rating: <%= @movie.vote_average %></p>
+    <% elsif !@movies.nil? %>
+      <% @movies.each do |movie| %><br>
+        <section id='movie-<%= movie.id %>'>
+        <p>Title: <%= link_to movie.title, "/movies/#{movie.id}" %></p>
+        <p>Average Rating: <%= movie.vote_average %></p>
+      </section>
+    <% end %>
   </center>
 <% end %>
