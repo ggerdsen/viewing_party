@@ -19,6 +19,16 @@ RSpec.describe "Movie Index Page" do
         expect(page).to have_content("Gabriel's Inferno Part II")
       end
     end
+    
+    it "I can retrieve the most recently posted movie" do
+      VCR.use_cassette("recent", allow_playback_repeats: true, :record => :new_episodes) do
+        visit "/discover"
+        click_on "Retrieve Most Recent Movie"
+
+        expect(current_path).to eq("/movies")
+        expect(page).to have_content("Shadow")
+      end
+    end
 
     it "I can search for a movie by keyword" do
       VCR.use_cassette("search_by_keyword", allow_playback_repeats: true, :record => :new_episodes) do

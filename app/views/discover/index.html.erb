@@ -1,7 +1,10 @@
-<center><h1><%= "Welcome #{current_user.name}!" %></h1></center>
-<center><p><%= button_to "Find Top Rated Movies", "/movies", :params => {:endpoint => "3/movie/top_rated"}, method: :get %></p></center>
-<center><p><%= form_tag "/movies", method: :get do %>
-              <%= label_tag :search_string, "Enter your search keywords" %><br/>
+<center><h1><%= "Welcome #{current_user.name}!" %></h1>
+<p><%= button_to "Retrieve Most Recent Movie", "/movies", :params => {:endpoint => "3/movie/latest", :search_string => "#newest_movie"}, method: :get %></p>
+<h3>OR</h3>
+<p><%= button_to "Find Top Rated Movies", "/movies", :params => {:endpoint => "3/movie/top_rated"}, method: :get %></p>
+<h3>OR</h3>
+<p><%= form_tag "/movies", method: :get do %>
+              <%= label_tag :search_string, "Enter your keywords to search here"  %><br/>
               <%= text_field_tag :search_string %>
               <%= submit_tag "Find Movies" %>
             <% end %>
