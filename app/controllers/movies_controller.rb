@@ -18,7 +18,7 @@ class MoviesController < ApplicationController
 
   def return_results(search_string)
     movie = SearchFacade.new
-    if search_string == "#newest_movie"
+    if search_string == '#newest_movie'
       @movie = movie.movies_results(search_string)
     else
       @movies = movie.movies_results(search_string)

@@ -4,7 +4,7 @@ class SearchFacade
   end
 
   def movies_results(search_string)
-    if search_string == "#newest_movie"
+    if search_string == '#newest_movie'
       newest_movie
     elsif !search_string.nil?
       find_movies(search_string)
@@ -19,9 +19,9 @@ class SearchFacade
       Movie.new(data)
     end
   end
-  
+
   def newest_movie
-    result = @movie_data.get_newest
+    result = @movie_data.newest
     Movie.new(result)
   end
 
