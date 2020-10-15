@@ -16,6 +16,12 @@ class MoviesService
     both_pages << page2_results(page2)
     both_pages.flatten
   end
+  
+  def get_newest
+    result = []
+    query = conn.get("3/movie/latest")
+    result = JSON.parse(query.body, symbolize_names: true)
+  end
 
   def get_summary(id)
     results = []
