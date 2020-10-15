@@ -25,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Thu, 15 Oct 2020 01:12:56 GMT
+      - Thu, 15 Oct 2020 11:18:13 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -40,15 +40,13 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Cache:
-      - Hit from cloudfront
+      - Miss from cloudfront
       Via:
-      - 1.1 1df382f2345322fac115f7931b894fdb.cloudfront.net (CloudFront)
+      - 1.1 76a7fdbced88b6eccf433c4e386bae41.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - IAD79-C1
+      - IAD89-C3
       X-Amz-Cf-Id:
-      - IeHEOhhB4ruwChlSZygM7FZdwNCBa7iaO0qzlBI2DEIRF9izqODpNg==
-      Age:
-      - '45'
+      - _WpR5SHY04VcvIN8P4nN0bYXFe-7lyZLvi4DsJSvDKKLFW3FuI-74w==
     body:
       encoding: ASCII-8BIT
       string: '{"page":1,"total_results":2,"total_pages":1,"results":[{"popularity":26.257,"vote_count":3568,"video":false,"poster_path":"\/za41IHkj6LnkilfTzv5B2qmthKD.jpg","id":9836,"adult":false,"backdrop_path":"\/9DUAR7p4SGqt2ISH2lmSzNx3uni.jpg","original_language":"en","original_title":"Happy
@@ -60,7 +58,7 @@ http_interactions:
         The Mighty Sven, a penguin who can fly! Things get worse for Mumble when the
         world is shaken by powerful forces, causing him to brings together the penguin
         nations and their allies to set things right.","release_date":"2011-11-17"}]}'
-  recorded_at: Thu, 15 Oct 2020 01:13:41 GMT
+  recorded_at: Thu, 15 Oct 2020 11:18:13 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/search/movie?api_key=<dont_share_my_key>&page=2&query=Happy%20Feet
@@ -85,8 +83,6 @@ http_interactions:
       - '57'
       Connection:
       - keep-alive
-      Date:
-      - Thu, 15 Oct 2020 01:12:56 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -96,22 +92,22 @@ http_interactions:
       Access-Control-Expose-Headers:
       - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
         Content-Length, Content-Range
+      Date:
+      - Thu, 15 Oct 2020 11:18:13 GMT
       Etag:
       - 0bcab0ec408b6218d3bde3a982d5c64a
       Cache-Control:
       - public, max-age=120
       X-Cache:
-      - Hit from cloudfront
+      - RefreshHit from cloudfront
       Via:
-      - 1.1 a805f3562e8099c23b78cf69c21f7835.cloudfront.net (CloudFront)
+      - 1.1 b471d3775e81a9be536b52b99f39452a.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - IAD79-C1
+      - IAD89-C3
       X-Amz-Cf-Id:
-      - UgLdh2Udh7iGW-q3IRwBNLDrxYjywU5JP7jPTbGWIBvqNZYWDPn9VQ==
-      Age:
-      - '45'
+      - 0pr_2y9_RmMBHUEHQJit1fAZDHI34ht2IXDPEtCGrTb6qVHvf3Wp3Q==
     body:
       encoding: UTF-8
       string: '{"page":2,"total_results":2,"total_pages":1,"results":[]}'
-  recorded_at: Thu, 15 Oct 2020 01:13:41 GMT
+  recorded_at: Thu, 15 Oct 2020 11:18:13 GMT
 recorded_with: VCR 6.0.0
