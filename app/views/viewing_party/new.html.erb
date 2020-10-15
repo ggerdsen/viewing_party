@@ -1,0 +1,24 @@
+<h1>Viewing Party Details</h1>
+
+<%= form_tag "viewing_party/new" do %>
+  <!p class="movie-title">Movie: <%= @movie.title %></p>
+<!% require "pry"; binding.pry %>
+  <!%= hidden_field_tag :movie_id, @movie.movie_id %>
+
+  <%= label_tag :party_duration, "Duration:" %>
+  <%= number_field_tag :party_duration, @movie.runtime %> <br>
+
+  <%= label_tag :date, "Date:" %>
+  <%= date_field_tag :date %> <br>
+
+  <%= label_tag :start_time, "Start Time:" %>
+  <%= number_field_tag :start_time %>
+  <br><br>
+  <%= label_tag :friends, "Invite friends to your viewing party:" %> <br>
+
+  <!div class='checkbox, friends'>
+    <!%= collection_check_boxes(:users, :id, current_user.friends, :id, :username, include_hidden: false) %>
+  <!div>
+
+  <%= submit_tag "Create Party" %>
+<% end %>
