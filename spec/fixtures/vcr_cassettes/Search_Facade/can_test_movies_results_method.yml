@@ -25,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Tue, 13 Oct 2020 13:34:50 GMT
+      - Thu, 15 Oct 2020 11:10:30 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -42,23 +42,23 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 788d7198cb2566fbe3b302f674409060.cloudfront.net (CloudFront)
+      - 1.1 a075746ea1824aa1c02a5e26a9e968e5.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - IAD79-C1
+      - IAD89-C3
       X-Amz-Cf-Id:
-      - d8fw_UAnfFVGVzA7Hn9b4AGzi4TGQ2MK38p2OVDrJKyxggv8_CSJQA==
+      - IswwK14ucxTILIoHMz0iVE1Esxmjt5pkWCUwYbZQUCu4hMziq84iwg==
     body:
       encoding: ASCII-8BIT
-      string: '{"page":1,"total_results":2,"total_pages":1,"results":[{"popularity":24.774,"vote_count":3566,"video":false,"poster_path":"\/za41IHkj6LnkilfTzv5B2qmthKD.jpg","id":9836,"adult":false,"backdrop_path":"\/9DUAR7p4SGqt2ISH2lmSzNx3uni.jpg","original_language":"en","original_title":"Happy
+      string: '{"page":1,"total_results":2,"total_pages":1,"results":[{"popularity":26.257,"vote_count":3568,"video":false,"poster_path":"\/za41IHkj6LnkilfTzv5B2qmthKD.jpg","id":9836,"adult":false,"backdrop_path":"\/9DUAR7p4SGqt2ISH2lmSzNx3uni.jpg","original_language":"en","original_title":"Happy
         Feet","genre_ids":[16,35,10751],"title":"Happy Feet","vote_average":6.1,"overview":"Into
         the world of the Emperor Penguins, who find their soul mates through song,
-        a penguin is born who cannot sing. But he can tap dance something fierce!","release_date":"2006-11-16"},{"popularity":18.023,"vote_count":998,"video":false,"poster_path":"\/2gWiQ4mn85jcXtREVePlVViupeV.jpg","id":65759,"adult":false,"backdrop_path":"\/jiY7dnAtkvM1UykifM0RJAhZLY6.jpg","original_language":"en","original_title":"Happy
+        a penguin is born who cannot sing. But he can tap dance something fierce!","release_date":"2006-11-16"},{"popularity":18.66,"vote_count":998,"video":false,"poster_path":"\/2gWiQ4mn85jcXtREVePlVViupeV.jpg","id":65759,"adult":false,"backdrop_path":"\/jiY7dnAtkvM1UykifM0RJAhZLY6.jpg","original_language":"en","original_title":"Happy
         Feet Two","genre_ids":[16,35,10751],"title":"Happy Feet Two","vote_average":6,"overview":"Mumble
         the penguin has a problem: his son Erik, who is reluctant to dance, encounters
         The Mighty Sven, a penguin who can fly! Things get worse for Mumble when the
         world is shaken by powerful forces, causing him to brings together the penguin
         nations and their allies to set things right.","release_date":"2011-11-17"}]}'
-  recorded_at: Tue, 13 Oct 2020 13:34:50 GMT
+  recorded_at: Thu, 15 Oct 2020 11:10:30 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/search/movie?api_key=<dont_share_my_key>&page=2&query=Happy%20Feet
@@ -93,7 +93,7 @@ http_interactions:
       - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
         Content-Length, Content-Range
       Date:
-      - Tue, 13 Oct 2020 13:34:50 GMT
+      - Thu, 15 Oct 2020 11:10:30 GMT
       Etag:
       - 0bcab0ec408b6218d3bde3a982d5c64a
       Cache-Control:
@@ -101,13 +101,13 @@ http_interactions:
       X-Cache:
       - RefreshHit from cloudfront
       Via:
-      - 1.1 19ae496eb414e9373ed8ce49d0fdbba3.cloudfront.net (CloudFront)
+      - 1.1 738984066968793a5714282f49fe0ab9.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - IAD79-C1
+      - IAD89-C3
       X-Amz-Cf-Id:
-      - SykDScVa3B0fLJRAFJpGxiHJH3hKU8GdXuEmoqgi8I2wWPQopDUclA==
+      - dYcJ5xQiDRiQfQTP-xqiqZ_kcMHVN_n79PFAzuSqECQ3ZOMu0O9qjA==
     body:
       encoding: UTF-8
       string: '{"page":2,"total_results":2,"total_pages":1,"results":[]}'
-  recorded_at: Tue, 13 Oct 2020 13:34:50 GMT
+  recorded_at: Thu, 15 Oct 2020 11:10:30 GMT
 recorded_with: VCR 6.0.0
