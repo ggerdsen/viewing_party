@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/latest?api_key=<dont_share_my_key>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 15 Oct 2020 00:38:46 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=0
+      X-Memc:
+      - MISS
+      X-Memc-Key:
+      - a6c4d7fe25ef8e063aa02c0927d68b2c
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '0'
+      Last-Modified:
+      - '2020-10-15 00:15:06 +0000'
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 28d79637e27f11e3ab19a9515e273a5b.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - KuFZLvOfOcYWD4fMbxZMKxdzqkWvapaulzQjCwgdv8BA09-exs_Blg==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOm51bGwsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0IjowLCJnZW5yZXMiOltdLCJob21lcGFnZSI6IiIsImlkIjo3NTM0NzYsImltZGJfaWQiOm51bGwsIm9yaWdpbmFsX2xhbmd1YWdlIjoiemgiLCJvcmlnaW5hbF90aXRsZSI6Iuaal+W9sSIsIm92ZXJ2aWV3IjoiVGhlIHN0b3J5IG9mIGEgc2hhZG93IG9yZ2FuaXphdGlvbiBkdXJpbmcgdGhlIFJlbnpvbmcgcmVpZ24gb2YgdGhlIFNvbmcgRHluYXN0eSwgd2hpY2ggc3BlY2lhbGl6ZWQgaW4gdHJhaW5pbmcgcHJvZmVzc2lvbmFsIGtpbGxlcnMsIG9iZXlpbmcgb3JkZXJzIHNpbmNlIGNoaWxkaG9vZC4gRHVyaW5nIGEgbWlzc2lvbiwgYSBraWxsZXIgZm91bmQgdGhhdCB0aGUgYXNzYXNzaW5hdGlvbiB0YXJnZXQgd2FzIGlubm9jZW50IEJhbyBaaGVuZy4iLCJwb3B1bGFyaXR5IjowLjAsInBvc3Rlcl9wYXRoIjoiL3lTc0lpSkdCTGhNREhUN25LT2NrR3EyeWtNWC5qcGciLCJwcm9kdWN0aW9uX2NvbXBhbmllcyI6W10sInByb2R1Y3Rpb25fY291bnRyaWVzIjpbeyJpc29fMzE2Nl8xIjoiQ04iLCJuYW1lIjoiQ2hpbmEifV0sInJlbGVhc2VfZGF0ZSI6IjIwMjAtMTAtMDkiLCJyZXZlbnVlIjowLCJydW50aW1lIjo4NSwic3Bva2VuX2xhbmd1YWdlcyI6W3siaXNvXzYzOV8xIjoiemgiLCJuYW1lIjoi5pmu6YCa6K+dIn1dLCJzdGF0dXMiOiJSZWxlYXNlZCIsInRhZ2xpbmUiOiIiLCJ0aXRsZSI6IlNoYWRvdyIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjowLjAsInZvdGVfY291bnQiOjB9
+  recorded_at: Thu, 15 Oct 2020 00:38:46 GMT
+recorded_with: VCR 6.0.0
