@@ -48,7 +48,6 @@ This project requires:
 * Run your development server with `rails s`. Visit [localhost:3000](http://localhost:3000) to see the app in action.
 
 ## Schema
-Add notes for why we structured things this way!
 <img width="800" height="600" alt="Schema Light Screenshot" src="https://github.com/Callbritton/viewing_party/blob/main/app/assets/images/viewing_party_paired_schema.png?raw=true">
 
 
