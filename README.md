@@ -1,5 +1,5 @@
 # Viewing Party
-### BE Mod 3 Week 1/2 Paired Project
+### BE Mod 3 Week 1/2 Paired Project 
 
 This is the base repo for the [viewing party project](https://backend.turing.io/module3/projects/viewing_party) used for Turing's Backend Module 3.
 
