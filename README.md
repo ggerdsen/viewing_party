@@ -49,5 +49,3 @@ This project requires:
 
 ## Schema
 <img width="800" height="600" alt="Schema Light Screenshot" src="https://github.com/Callbritton/viewing_party/blob/main/app/assets/images/viewing_party_paired_schema.png?raw=true">
-
-
